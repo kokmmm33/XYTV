@@ -16,6 +16,8 @@ class MainTabbarViewController: UITabBarController {
         addsubViewController(name: "Discover")
         addsubViewController(name: "Rank")
         addsubViewController(name: "Profile")
+        
+        tabBar.tintColor = UIColor.orange
     }
 
     func addsubViewController(name : String) -> Void {

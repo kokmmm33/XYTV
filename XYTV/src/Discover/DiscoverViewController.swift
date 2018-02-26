@@ -12,7 +12,7 @@ class DiscoverViewController: MainNavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        view.backgroundColor = UIColor.randomColor()
         
         // Do any additional setup after loading the view.
     }

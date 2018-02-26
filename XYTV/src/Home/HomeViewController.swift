@@ -14,6 +14,7 @@ class HomeViewController: MainNavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.randomColor()
         setupNavigationBar()
     }
     
@@ -26,6 +27,7 @@ class HomeViewController: MainNavigationController {
 
 // MARK:- 设置UI
 extension HomeViewController {
+    
     
     // MARK:- 导航条
     fileprivate func setupNavigationBar() {
