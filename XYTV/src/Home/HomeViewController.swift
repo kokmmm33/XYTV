@@ -21,8 +21,6 @@ class HomeViewController: MainNavigationController {
       
         searchBar.endEditing(true)
     }
-
-
     
 }
 
