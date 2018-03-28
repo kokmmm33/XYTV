@@ -22,6 +22,11 @@
 		2E97B23A2042BA35004DF42C /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E97B2392042BA35004DF42C /* Profile.storyboard */; };
 		2E97B23C2042BBFD004DF42C /* MainTabbarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E97B23B2042BBFD004DF42C /* MainTabbarController.storyboard */; };
 		2E97B2402043AE91004DF42C /* UIColor-Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E97B23F2043AE91004DF42C /* UIColor-Extention.swift */; };
+		2EC05FD220469DAE00A4F0D8 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC05FD120469DAE00A4F0D8 /* PageTitleView.swift */; };
+		2EC05FD420469DBA00A4F0D8 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC05FD320469DBA00A4F0D8 /* PageContentView.swift */; };
+		2EC05FD620469DC400A4F0D8 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC05FD520469DC400A4F0D8 /* PageView.swift */; };
+		2EC05FD820469DE600A4F0D8 /* PageTitleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC05FD720469DE600A4F0D8 /* PageTitleStyle.swift */; };
+		2EC05FDB2046B32700A4F0D8 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC05FDA2046B32700A4F0D8 /* Const.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +47,11 @@
 		2E97B2392042BA35004DF42C /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		2E97B23B2042BBFD004DF42C /* MainTabbarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabbarController.storyboard; sourceTree = "<group>"; };
 		2E97B23F2043AE91004DF42C /* UIColor-Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extention.swift"; sourceTree = "<group>"; };
+		2EC05FD120469DAE00A4F0D8 /* PageTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
+		2EC05FD320469DBA00A4F0D8 /* PageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
+		2EC05FD520469DC400A4F0D8 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		2EC05FD720469DE600A4F0D8 /* PageTitleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTitleStyle.swift; sourceTree = "<group>"; };
+		2EC05FDA2046B32700A4F0D8 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +109,7 @@
 		2E97B2172042B06C004DF42C /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				2EC05FD020469D8700A4F0D8 /* CJPageView */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -106,6 +117,7 @@
 		2E97B2182042B07A004DF42C /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				2EC05FD92046B2FD00A4F0D8 /* Common */,
 				2E97B23D2043A7E4004DF42C /* Extension */,
 				2E97B2312042B466004DF42C /* MainTabbarViewController.swift */,
 				2E97B2272042B388004DF42C /* MainNavigationController.swift */,
@@ -156,6 +168,25 @@
 				2E97B23F2043AE91004DF42C /* UIColor-Extention.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		2EC05FD020469D8700A4F0D8 /* CJPageView */ = {
+			isa = PBXGroup;
+			children = (
+				2EC05FD120469DAE00A4F0D8 /* PageTitleView.swift */,
+				2EC05FD320469DBA00A4F0D8 /* PageContentView.swift */,
+				2EC05FD520469DC400A4F0D8 /* PageView.swift */,
+				2EC05FD720469DE600A4F0D8 /* PageTitleStyle.swift */,
+			);
+			path = CJPageView;
+			sourceTree = "<group>";
+		};
+		2EC05FD92046B2FD00A4F0D8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2EC05FDA2046B32700A4F0D8 /* Const.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,11 +268,16 @@
 				2E97B22E2042B3D7004DF42C /* RankViewController.swift in Sources */,
 				2E97B2282042B388004DF42C /* MainNavigationController.swift in Sources */,
 				2E97B2402043AE91004DF42C /* UIColor-Extention.swift in Sources */,
+				2EC05FD420469DBA00A4F0D8 /* PageContentView.swift in Sources */,
 				2E97B2052042B040004DF42C /* AppDelegate.swift in Sources */,
 				2E97B2322042B466004DF42C /* MainTabbarViewController.swift in Sources */,
 				2E97B22C2042B3CA004DF42C /* ProfileViewController.swift in Sources */,
+				2EC05FD620469DC400A4F0D8 /* PageView.swift in Sources */,
+				2EC05FD220469DAE00A4F0D8 /* PageTitleView.swift in Sources */,
 				2E97B22A2042B3BC004DF42C /* DiscoverViewController.swift in Sources */,
 				2E97B2302042B3FE004DF42C /* HomeViewController.swift in Sources */,
+				2EC05FD820469DE600A4F0D8 /* PageTitleStyle.swift in Sources */,
+				2EC05FDB2046B32700A4F0D8 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
