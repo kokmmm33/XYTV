@@ -12,13 +12,16 @@ import UIKit
 let kcellIdentifiler = "kcellIdentifiler"
 
 protocol PageContentViewDelegate: class {
-    func contentViewEndScroll( _ : PageContentView, index : Int);
+    func contentViewEndScroll( _ : PageContentView, index : Int)
+    func contentViewEndScroll( _ : PageContentView, index : Int, process : CGFloat)
     
 }
 
 class PageContentView: UIView {
     weak var delegate : PageContentViewDelegate?
+    var startOffset : CGFloat = 0.0
     
+    fileprivate var isTagEvent = true
     fileprivate var viewControllers : [UIViewController]!
     fileprivate var parentVC : UIViewController!
     fileprivate lazy var collectionView : UICollectionView = {
@@ -63,6 +66,27 @@ extension PageContentView {
 }
 
 extension PageContentView: UICollectionViewDelegate {
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        isTagEvent = false
+        startOffset = collectionView.contentOffset.x
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if isTagEvent {
+            return
+        }
+        let scrollOffset = collectionView.contentOffset.x - startOffset
+        if scrollOffset == 0 {
+            return;
+        }
+        let index = (startOffset / collectionView.bounds.width) + scrollOffset / abs(scrollOffset)
+        let progress = abs(scrollOffset/collectionView.bounds.width)
+        print(scrollOffset, index)
+        delegate?.contentViewEndScroll(self, index: Int(index), process: progress)
+        
+        
+    }
+    
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         if !decelerate {
             contentEndScroll()
@@ -106,7 +130,9 @@ extension PageContentView {
         guard targetIndex < viewControllers.count else {
             return
         }
+        isTagEvent = true
         collectionView.scrollToItem(at: IndexPath(row: targetIndex, section: 0), at: .left, animated: false)
+        
     }
     
 }

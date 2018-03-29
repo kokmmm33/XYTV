@@ -66,6 +66,10 @@ extension PageView : PageTitleViewDelegate {
 }
 
 extension PageView: PageContentViewDelegate {
+    func contentViewEndScroll(_: PageContentView, index: Int, process: CGFloat) {
+        titleView.graduColor(index: index, progress: process);
+    }
+    
     func contentViewEndScroll(_: PageContentView, index: Int) {
         titleView.adjustTitleLablePosition(targetIndex: index)
     }
