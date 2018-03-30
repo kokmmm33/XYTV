@@ -9,7 +9,7 @@
 import UIKit
 
 
-let kcellIdentifiler = "kcellIdentifiler"
+private let kcellIdentifiler = "kcellIdentifiler"
 
 protocol PageContentViewDelegate: class {
     func contentViewEndScroll( _ : PageContentView, index : Int)

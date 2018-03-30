@@ -11,6 +11,7 @@ import UIKit
 class HomeViewController: MainNavigationController {
 
     var searchBar : UISearchBar!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,7 @@ extension HomeViewController {
         automaticallyAdjustsScrollViewInsets = false
         setupNavigationBar()
         setupPageView()
+        setupWaterfallView()
     }
     
     
@@ -71,6 +73,11 @@ extension HomeViewController {
         
         let pageView = PageView(frame: frame, titles: titles, controllers: controllers, parentController: self, style: style)
         view.addSubview(pageView)
+    }
+    
+    // 瀑布流
+    private func setupWaterfallView() {
+        
     }
 }
 
